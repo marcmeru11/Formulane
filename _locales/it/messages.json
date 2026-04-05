@@ -1,0 +1,181 @@
+{
+  "extName": {
+    "message": "Formulane",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "Telemetria F1 in tempo reale e avvisi della direzione gara.",
+    "description": "The description of the extension."
+  },
+  "noData": {
+    "message": "NESSUN DATO"
+  },
+  "offline": {
+    "message": "FUORI LINEA"
+  },
+  "live": {
+    "message": "DAL VIVO"
+  },
+  "status": {
+    "message": "STATO"
+  },
+  "raceControl": {
+    "message": "DIREZIONE GARA"
+  },
+  "upcomingSession": {
+    "message": "PROSSIMA SESSIONE"
+  },
+  "waitingData": {
+    "message": "IN ATTESA DEI DATI DELLA SESSIONE..."
+  },
+  "onTrack": {
+    "message": "IN PISTA!"
+  },
+  "settingsTitle": {
+    "message": "Impostazioni Formulive"
+  },
+  "settingsHeader": {
+    "message": "IMPOSTAZIONI"
+  },
+  "syncSection": {
+    "message": "Sincronizzazione"
+  },
+  "refreshInterval": {
+    "message": "Intervallo di aggiornamento"
+  },
+  "refreshDesc": {
+    "message": "Frequenza di aggiornamento della telemetria"
+  },
+  "minutes": {
+    "message": "MIN"
+  },
+  "displaySection": {
+    "message": "Visualizzazione"
+  },
+  "driversOnScreen": {
+    "message": "Piloti sullo schermo"
+  },
+  "driversDesc": {
+    "message": "Numero di piloti da mostrare sul podio"
+  },
+  "notificationsSection": {
+    "message": "Notifiche"
+  },
+  "sessionStart": {
+    "message": "Inizio sessione"
+  },
+  "sessionStartDesc": {
+    "message": "Avvisa quando una sessione diventa DAL VIVO"
+  },
+  "leaderChange": {
+    "message": "Cambio leader"
+  },
+  "leaderChangeDesc": {
+    "message": "Avvisa quando il pilota in P1 viene sorpassato"
+  },
+  "trackIncidents": {
+    "message": "Incidenti in pista (SC/VSC)"
+  },
+  "trackIncidentsDesc": {
+    "message": "Avvisa su Safety Car, VSC e bandiere rosse"
+  },
+  "raceControlAlerts": {
+    "message": "Direzione gara"
+  },
+  "raceControlDesc": {
+    "message": "Indagini, penalità e DRS abilitato"
+  },
+  "saveChanges": {
+    "message": "SALVA MODIFICHE"
+  },
+  "settingsSaved": {
+    "message": "Impostazioni salvate con successo"
+  },
+  "errorInvalidInterval": {
+    "message": "Errore: Intervallo non valido"
+  },
+  "clear": {
+    "message": "LIBERA"
+  },
+  "trackClear": {
+    "message": "PISTA LIBERA"
+  },
+  "yellowFlag": {
+    "message": "BANDIERA GIALLA"
+  },
+  "safetyCar": {
+    "message": "SAFETY CAR"
+  },
+  "scMessage": {
+    "message": "AUTO IN PISTA - RITMO RIDOTTO"
+  },
+  "redFlag": {
+    "message": "BANDIERA ROSSA"
+  },
+  "sessionSuspended": {
+    "message": "SESSIONE SOSPESA"
+  },
+  "vsc": {
+    "message": "VSC"
+  },
+  "vscMessage": {
+    "message": "RIDURRE LA VELOCITÀ DEL 40%"
+  },
+  "vscEnding": {
+    "message": "FINE VSC"
+  },
+  "prepareRestart": {
+    "message": "PREPARARSI ALLA RIPARTENZA"
+  },
+  "scEnding": {
+    "message": "FINE SC"
+  },
+  "scEndingMessage": {
+    "message": "MASSIMA TENSIONE - RIENTRO SC"
+  },
+  "dangerSector": {
+    "message": "PERICOLO NEL SETTORE"
+  },
+  "incidentOnTrack": {
+    "message": "INCIDENTE IN PISTA"
+  },
+  "leaderChanged": {
+    "message": "CAMBIO LEADER"
+  },
+  "newP1": {
+    "message": "è il nuovo P1!"
+  },
+  "liveTitle": {
+    "message": "DAL VIVO: "
+  },
+  "resultTitle": {
+    "message": "RISULTATO: "
+  },
+  "final": {
+    "message": "FINALE"
+  },
+  "dayAbbr": {
+    "message": "G"
+  },
+  "hourAbbr": {
+    "message": "O"
+  },
+  "minAbbr": {
+    "message": "M"
+  },
+  "secAbbr": {
+    "message": "S"
+  },
+  "sessionLive": {
+    "message": "SESSIONE DAL VIVO"
+  },
+  "sessionStarted": {
+    "message": "È iniziata:"
+  },
+  "p1": {
+    "message": "P1"
+  },
+  "driverPlaceholder": {
+    "message": "PILOTA"
+  }
+}

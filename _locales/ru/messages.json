@@ -1,0 +1,181 @@
+{
+  "extName": {
+    "message": "Formulane",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "Телеметрия F1 в реальном времени и оповещения дирекции гонки.",
+    "description": "The description of the extension."
+  },
+  "noData": {
+    "message": "НЕТ ДАННЫХ"
+  },
+  "offline": {
+    "message": "ОФФЛАЙН"
+  },
+  "live": {
+    "message": "ПРЯМОЙ ЭФИР"
+  },
+  "status": {
+    "message": "СТАТУС"
+  },
+  "raceControl": {
+    "message": "ДИРЕКЦИЯ ГОНКИ"
+  },
+  "upcomingSession": {
+    "message": "СЛЕДУЮЩАЯ СЕССИЯ"
+  },
+  "waitingData": {
+    "message": "ОЖИДАНИЕ ДАННЫХ СЕССИИ..."
+  },
+  "onTrack": {
+    "message": "НА ТРАССЕ!"
+  },
+  "settingsTitle": {
+    "message": "Настройки Formulive"
+  },
+  "settingsHeader": {
+    "message": "НАСТРОЙКИ"
+  },
+  "syncSection": {
+    "message": "Синхронизация"
+  },
+  "refreshInterval": {
+    "message": "Интервал обновления"
+  },
+  "refreshDesc": {
+    "message": "Частота обновления телеметрии"
+  },
+  "minutes": {
+    "message": "МИН"
+  },
+  "displaySection": {
+    "message": "Отображение"
+  },
+  "driversOnScreen": {
+    "message": "Пилотов на экране"
+  },
+  "driversDesc": {
+    "message": "Количество пилотов на подиуме"
+  },
+  "notificationsSection": {
+    "message": "Уведомления"
+  },
+  "sessionStart": {
+    "message": "Начало сессии"
+  },
+  "sessionStartDesc": {
+    "message": "Оповещать о переходе сессии в ПРЯМОЙ ЭФИР"
+  },
+  "leaderChange": {
+    "message": "Смена лидера"
+  },
+  "leaderChangeDesc": {
+    "message": "Оповещать об обгоне и потере P1"
+  },
+  "trackIncidents": {
+    "message": "Инциденты на трассе (SC/VSC)"
+  },
+  "trackIncidentsDesc": {
+    "message": "Оповещать о сейфти-каре, VSC и красных флагах"
+  },
+  "raceControlAlerts": {
+    "message": "Дирекция гонки"
+  },
+  "raceControlDesc": {
+    "message": "Расследования, штрафы и активация DRS"
+  },
+  "saveChanges": {
+    "message": "СОХРАНИТЬ ИЗМЕНЕНИЯ"
+  },
+  "settingsSaved": {
+    "message": "Настройки успешно сохранены"
+  },
+  "errorInvalidInterval": {
+    "message": "Ошибка: Неверный интервал"
+  },
+  "clear": {
+    "message": "ЧИСТО"
+  },
+  "trackClear": {
+    "message": "ТРАССА ЧИСТА"
+  },
+  "yellowFlag": {
+    "message": "ЖЕЛТЫЙ ФЛАГ"
+  },
+  "safetyCar": {
+    "message": "МАШИНА БЕЗОПАСНОСТИ"
+  },
+  "scMessage": {
+    "message": "МАШИНА НА ТРАССЕ - СНИЗИТЬ СКОРОСТЬ"
+  },
+  "redFlag": {
+    "message": "КРАСНЫЙ ФЛАГ"
+  },
+  "sessionSuspended": {
+    "message": "СЕССИЯ ПРИОСТАНОВЛЕНА"
+  },
+  "vsc": {
+    "message": "VSC"
+  },
+  "vscMessage": {
+    "message": "СНИЗИТЬ СКОРОСТЬ НА 40%"
+  },
+  "vscEnding": {
+    "message": "ЗАВЕРШЕНИЕ VSC"
+  },
+  "prepareRestart": {
+    "message": "ПОДГОТОВИТЬСЯ К РЕСТАРТУ"
+  },
+  "scEnding": {
+    "message": "ЗАВЕРШЕНИЕ SC"
+  },
+  "scEndingMessage": {
+    "message": "МАКСИМАЛЬНОЕ ВНИМАНИЕ - SC УХОДИТ"
+  },
+  "dangerSector": {
+    "message": "ОПАСНО В СЕКТОРЕ"
+  },
+  "incidentOnTrack": {
+    "message": "ИНЦИДЕНТ НА ТРАССЕ"
+  },
+  "leaderChanged": {
+    "message": "СМЕНА ЛИДЕРА"
+  },
+  "newP1": {
+    "message": "теперь на P1!"
+  },
+  "liveTitle": {
+    "message": "ПРЯМОЙ ЭФИР: "
+  },
+  "resultTitle": {
+    "message": "РЕЗУЛЬТАТ: "
+  },
+  "final": {
+    "message": "ФИНАЛ"
+  },
+  "dayAbbr": {
+    "message": "Д"
+  },
+  "hourAbbr": {
+    "message": "Ч"
+  },
+  "minAbbr": {
+    "message": "М"
+  },
+  "secAbbr": {
+    "message": "С"
+  },
+  "sessionLive": {
+    "message": "СЕССИЯ В ПРЯМОМ ЭФИРЕ"
+  },
+  "sessionStarted": {
+    "message": "Началась:"
+  },
+  "p1": {
+    "message": "P1"
+  },
+  "driverPlaceholder": {
+    "message": "ПИЛОТ"
+  }
+}

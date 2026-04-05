@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title data-i18n="settingsTitle">Configuración Formulive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-circle">F1</div>
+      <h1 data-i18n="settingsHeader">CONFIGURACIÓN</h1>
+    </header>
+
+    <div class="settings-card">
+      <h2 data-i18n="syncSection">Sincronización</h2>
+      <div class="setting-row">
+        <label>
+          <strong data-i18n="refreshInterval">Intervalo de Refresco</strong>
+          <small data-i18n="refreshDesc">Frecuencia de actualización de telemetría</small>
+        </label>
+        <div class="input-group">
+          <input type="number" id="refreshInterval" min="1" max="60">
+          <span data-i18n="minutes" style="font-size: 11px; opacity: 0.5; font-weight: 700;">MIN</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-card">
+      <h2 data-i18n="displaySection">Visualización</h2>
+      <div class="setting-row">
+        <label>
+          <strong data-i18n="driversOnScreen">Pilotos en Pantalla</strong>
+          <small data-i18n="driversDesc">Cantidad de pilotos a mostrar en el podio</small>
+        </label>
+        <select id="driverCount">
+          <option value="3">TOP 3</option>
+          <option value="5">TOP 5</option>
+          <option value="10">TOP 10</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="settings-card">
+      <h2 data-i18n="notificationsSection">Notificaciones</h2>
+      <div class="setting-row">
+        <label>
+          <strong data-i18n="sessionStart">Inicio de Sesión</strong>
+          <small data-i18n="sessionStartDesc">Avisar cuando una sesión pase a estar EN VIVO</small>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="notifySessionStart">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="setting-row">
+        <label>
+          <strong data-i18n="leaderChange">Cambio de Líder</strong>
+          <small data-i18n="leaderChangeDesc">Avisar cuando el piloto en P1 sea adelantado</small>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="notifyLeaderChange">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="setting-row">
+        <label>
+          <strong data-i18n="trackIncidents">Incidentes (SC/VSC)</strong>
+          <small data-i18n="trackIncidentsDesc">Avisar sobre Safety Car, VSC y Banderas Rojas</small>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="notifyTrackStatus">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="setting-row">
+        <label>
+          <strong data-i18n="raceControlAlerts">Dirección de Carrera</strong>
+          <small data-i18n="raceControlDesc">Investigaciones, sanciones y DRS habilitado</small>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="notifyRaceControl">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="actions">
+      <span id="status"></span>
+      <button id="save" class="btn-primary" data-i18n="saveChanges">GUARDAR CAMBIOS</button>
+    </div>
+
+    <footer>
+      FORMULIVE MONITOR PRO &copy; 2026
+    </footer>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

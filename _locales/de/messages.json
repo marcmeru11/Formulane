@@ -1,0 +1,181 @@
+{
+  "extName": {
+    "message": "Formulane",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "Echtzeit-F1-Telemetrie und Rennleitungs-Warnungen.",
+    "description": "The description of the extension."
+  },
+  "noData": {
+    "message": "KEINE DATEN"
+  },
+  "offline": {
+    "message": "OFFLINE"
+  },
+  "live": {
+    "message": "LIVE"
+  },
+  "status": {
+    "message": "STATUS"
+  },
+  "raceControl": {
+    "message": "RENNLEITUNG"
+  },
+  "upcomingSession": {
+    "message": "NÄCHSTE SESSION"
+  },
+  "waitingData": {
+    "message": "WARTE AUF SESSION-DATEN..."
+  },
+  "onTrack": {
+    "message": "AUF DER STRECKE!"
+  },
+  "settingsTitle": {
+    "message": "Formulive-Einstellungen"
+  },
+  "settingsHeader": {
+    "message": "EINSTELLUNGEN"
+  },
+  "syncSection": {
+    "message": "Synchronisation"
+  },
+  "refreshInterval": {
+    "message": "Aktualisierungsintervall"
+  },
+  "refreshDesc": {
+    "message": "Frequenz der Telemetrie-Aktualisierung"
+  },
+  "minutes": {
+    "message": "MIN"
+  },
+  "displaySection": {
+    "message": "Anzeige"
+  },
+  "driversOnScreen": {
+    "message": "Fahrer auf dem Bildschirm"
+  },
+  "driversDesc": {
+    "message": "Anzahl der Fahrer im Podium"
+  },
+  "notificationsSection": {
+    "message": "Benachrichtigungen"
+  },
+  "sessionStart": {
+    "message": "Sessionsbeginn"
+  },
+  "sessionStartDesc": {
+    "message": "Benachrichtigen, wenn Session LIVE geht"
+  },
+  "leaderChange": {
+    "message": "Führungswechsel"
+  },
+  "leaderChangeDesc": {
+    "message": "Benachrichtigen, wenn P1 überholt wird"
+  },
+  "trackIncidents": {
+    "message": "Streckenvorfälle (SC/VSC)"
+  },
+  "trackIncidentsDesc": {
+    "message": "Warnungen über Safety Car, VSC und Rote Flaggen"
+  },
+  "raceControlAlerts": {
+    "message": "Rennleitung"
+  },
+  "raceControlDesc": {
+    "message": "Untersuchungen, Strafen und DRS aktiviert"
+  },
+  "saveChanges": {
+    "message": "ÄNDERUNGEN SPEICHERN"
+  },
+  "settingsSaved": {
+    "message": "Einstellungen erfolgreich gespeichert"
+  },
+  "errorInvalidInterval": {
+    "message": "Fehler: Ungültiges Intervall"
+  },
+  "clear": {
+    "message": "FREI"
+  },
+  "trackClear": {
+    "message": "STRECKE FREI"
+  },
+  "yellowFlag": {
+    "message": "GELBE FLAGGE"
+  },
+  "safetyCar": {
+    "message": "SAFETY CAR"
+  },
+  "scMessage": {
+    "message": "FAHRZEUG AUF STRECKE - TEMPO REDUZIERT"
+  },
+  "redFlag": {
+    "message": "ROTE FLAGGE"
+  },
+  "sessionSuspended": {
+    "message": "SESSION UNTERBROCHEN"
+  },
+  "vsc": {
+    "message": "VSC"
+  },
+  "vscMessage": {
+    "message": "GESCHWINDIGKEIT UM 40% REDUZIEREN"
+  },
+  "vscEnding": {
+    "message": "VSC ENDET"
+  },
+  "prepareRestart": {
+    "message": "AUF RESTART VORBEREITEN"
+  },
+  "scEnding": {
+    "message": "SC ENDET"
+  },
+  "scEndingMessage": {
+    "message": "MAXIMALE SPANNUNG - SC KOMMT REIN"
+  },
+  "dangerSector": {
+    "message": "GEFAHR IN SEKTOR"
+  },
+  "incidentOnTrack": {
+    "message": "STRECKENVORFALL"
+  },
+  "leaderChanged": {
+    "message": "FÜHRUNGSWECHSEL"
+  },
+  "newP1": {
+    "message": "ist der neue P1!"
+  },
+  "liveTitle": {
+    "message": "LIVE: "
+  },
+  "resultTitle": {
+    "message": "ERGEBNIS: "
+  },
+  "final": {
+    "message": "FINAL"
+  },
+  "dayAbbr": {
+    "message": "T"
+  },
+  "hourAbbr": {
+    "message": "Std"
+  },
+  "minAbbr": {
+    "message": "Min"
+  },
+  "secAbbr": {
+    "message": "Sek"
+  },
+  "sessionLive": {
+    "message": "SESSION LIVE"
+  },
+  "sessionStarted": {
+    "message": "Hat begonnen:"
+  },
+  "p1": {
+    "message": "P1"
+  },
+  "driverPlaceholder": {
+    "message": "FAHRER"
+  }
+}

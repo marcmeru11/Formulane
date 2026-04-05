@@ -1,0 +1,181 @@
+{
+  "extName": {
+    "message": "Formulane",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "تتبع بيانات F1 في الوقت الفعلي وتنبيهات إدارة السباق.",
+    "description": "The description of the extension."
+  },
+  "noData": {
+    "message": "لا توجد بيانات"
+  },
+  "offline": {
+    "message": "غير متصل"
+  },
+  "live": {
+    "message": "مباشر"
+  },
+  "status": {
+    "message": "الحالة"
+  },
+  "raceControl": {
+    "message": "إدارة السباق"
+  },
+  "upcomingSession": {
+    "message": "الجلسة القادمة"
+  },
+  "waitingData": {
+    "message": "في انتظار بيانات الجلسة..."
+  },
+  "onTrack": {
+    "message": "على الحلبة!"
+  },
+  "settingsTitle": {
+    "message": "إعدادات Formulive"
+  },
+  "settingsHeader": {
+    "message": "الإعدادات"
+  },
+  "syncSection": {
+    "message": "المزامنة"
+  },
+  "refreshInterval": {
+    "message": "فتره التحديث"
+  },
+  "refreshDesc": {
+    "message": "تردد تحديث البيانات"
+  },
+  "minutes": {
+    "message": "دقيقة"
+  },
+  "displaySection": {
+    "message": "العرض"
+  },
+  "driversOnScreen": {
+    "message": "السائقين على الشاشة"
+  },
+  "driversDesc": {
+    "message": "عدد السائقين الذين سيظهرون على المنصة"
+  },
+  "notificationsSection": {
+    "message": "التنبيهات"
+  },
+  "sessionStart": {
+    "message": "بداية الجلسة"
+  },
+  "sessionStartDesc": {
+    "message": "التنبيه عندما تصبح الجلسة مباشرة"
+  },
+  "leaderChange": {
+    "message": "تغيير المتصدر"
+  },
+  "leaderChangeDesc": {
+    "message": "التنبيه عندما يتم تجاوز السائق في المركز الأول"
+  },
+  "trackIncidents": {
+    "message": "حوادث الحلبة (SC/VSC)"
+  },
+  "trackIncidentsDesc": {
+    "message": "التنبيه بشأن سيارة الأمان وVSC والأعلام الحمراء"
+  },
+  "raceControlAlerts": {
+    "message": "إدارة السباق"
+  },
+  "raceControlDesc": {
+    "message": "التحقيقات، العقوبات وتفعيل نظام DRS"
+  },
+  "saveChanges": {
+    "message": "حفظ التغييرات"
+  },
+  "settingsSaved": {
+    "message": "تم حفظ الإعدادات بنجاح"
+  },
+  "errorInvalidInterval": {
+    "message": "خطأ: فترة تحديث غير صالحة"
+  },
+  "clear": {
+    "message": "خالية"
+  },
+  "trackClear": {
+    "message": "الحلبة خالية"
+  },
+  "yellowFlag": {
+    "message": "علم أصفر"
+  },
+  "safetyCar": {
+    "message": "سيارة الأمان"
+  },
+  "scMessage": {
+    "message": "سيارة على الحلبة - خفض السرعة"
+  },
+  "redFlag": {
+    "message": "علم أحمر"
+  },
+  "sessionSuspended": {
+    "message": "الجلسة متوقفة"
+  },
+  "vsc": {
+    "message": "سيارة الأمان الافتراضية"
+  },
+  "vscMessage": {
+    "message": "خفض السرعة بنسبة 40%"
+  },
+  "vscEnding": {
+    "message": "نهاية VSC"
+  },
+  "prepareRestart": {
+    "message": "الاستعداد لإعادة الانطلاق"
+  },
+  "scEnding": {
+    "message": "نهاية سيارة الأمان"
+  },
+  "scEndingMessage": {
+    "message": "أقصى درجات الحذر - سيارة الأمان ستدخل"
+  },
+  "dangerSector": {
+    "message": "خطر في القطاع"
+  },
+  "incidentOnTrack": {
+    "message": "حادث في الحلبة"
+  },
+  "leaderChanged": {
+    "message": "تغيير المتصدر"
+  },
+  "newP1": {
+    "message": "هو المتصدر الجديد!"
+  },
+  "liveTitle": {
+    "message": "مباشر: "
+  },
+  "resultTitle": {
+    "message": "النتيجة: "
+  },
+  "final": {
+    "message": "النهائي"
+  },
+  "dayAbbr": {
+    "message": "يوم"
+  },
+  "hourAbbr": {
+    "message": "ساعة"
+  },
+  "minAbbr": {
+    "message": "د"
+  },
+  "secAbbr": {
+    "message": "ث"
+  },
+  "sessionLive": {
+    "message": "الجلسة مباشرة"
+  },
+  "sessionStarted": {
+    "message": "بدأت:"
+  },
+  "p1": {
+    "message": "م1"
+  },
+  "driverPlaceholder": {
+    "message": "سائق"
+  }
+}

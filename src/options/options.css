@@ -1,0 +1,233 @@
+:root {
+  --f1-red: #ff1801;
+  --bg: #0b0b10;
+  --card: rgba(31, 31, 39, 0.7);
+  --glass: rgba(255, 255, 255, 0.02);
+  --text: #ffffff;
+  --text-muted: #888894;
+  --accent: #ffd700;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  background-image: 
+    linear-gradient(var(--glass) 1px, transparent 1px),
+    linear-gradient(90deg, var(--glass) 1px, transparent 1px);
+  background-size: 30px 30px;
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  width: 90%;
+  background: var(--card);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--f1-red) 0%, #ff5c5c 100%);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin: 0;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #fff, #888);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background: var(--f1-red);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+  box-shadow: 0 0 15px rgba(225, 6, 0, 0.3);
+}
+
+.settings-card {
+  margin-bottom: 25px;
+}
+
+.settings-card h2 {
+  font-size: 11px;
+  color: var(--f1-red);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s;
+}
+
+.setting-row:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+label strong {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
+}
+
+label small {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,0,0,0.2);
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s;
+}
+
+.input-group:focus-within {
+  border-color: var(--f1-red);
+}
+
+input[type="number"], select {
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  outline: none;
+  width: 50px;
+  text-align: center;
+}
+
+select {
+  width: auto;
+  cursor: pointer;
+}
+
+option {
+  background: var(--bg);
+  color: white;
+}
+
+.actions {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-primary {
+  background: var(--f1-red);
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(225, 6, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background: #ff3c33;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(225, 6, 0, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+#status {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #4ade80;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#status.status-show {
+  opacity: 1;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

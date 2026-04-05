@@ -1,0 +1,181 @@
+{
+  "extName": {
+    "message": "Formulane",
+    "description": "扩展程序的名称。"
+  },
+  "extDescription": {
+    "message": "实时 F1 遥测和赛事控制警报。",
+    "description": "扩展程序的描述。"
+  },
+  "noData": {
+    "message": "无数据"
+  },
+  "offline": {
+    "message": "离线"
+  },
+  "live": {
+    "message": "进行中"
+  },
+  "status": {
+    "message": "状态"
+  },
+  "raceControl": {
+    "message": "赛事控制"
+  },
+  "upcomingSession": {
+    "message": "下一场课程"
+  },
+  "waitingData": {
+    "message": "等待课程数据..."
+  },
+  "onTrack": {
+    "message": "在赛道上！"
+  },
+  "settingsTitle": {
+    "message": "Formulive 设置"
+  },
+  "settingsHeader": {
+    "message": "设置"
+  },
+  "syncSection": {
+    "message": "同步"
+  },
+  "refreshInterval": {
+    "message": "刷新间隔"
+  },
+  "refreshDesc": {
+    "message": "遥测更新频率"
+  },
+  "minutes": {
+    "message": "分钟"
+  },
+  "displaySection": {
+    "message": "显示"
+  },
+  "driversOnScreen": {
+    "message": "屏幕显示车手"
+  },
+  "driversDesc": {
+    "message": "领奖台上显示的车手数量"
+  },
+  "notificationsSection": {
+    "message": "通知"
+  },
+  "sessionStart": {
+    "message": "课程开始"
+  },
+  "sessionStartDesc": {
+    "message": "当课程进入直播状态时提醒"
+  },
+  "leaderChange": {
+    "message": "领跑者变更"
+  },
+  "leaderChangeDesc": {
+    "message": "当 P1 车手被超越时提醒"
+  },
+  "trackIncidents": {
+    "message": "赛道事故 (SC/VSC)"
+  },
+  "trackIncidentsDesc": {
+    "message": "关于安全车、VSC 和红旗的警报"
+  },
+  "raceControlAlerts": {
+    "message": "赛事控制"
+  },
+  "raceControlDesc": {
+    "message": "调查、处罚和 DRS 启用"
+  },
+  "saveChanges": {
+    "message": "保存更改"
+  },
+  "settingsSaved": {
+    "message": "设置保存成功"
+  },
+  "errorInvalidInterval": {
+    "message": "错误：无效的间隔"
+  },
+  "clear": {
+    "message": "清除"
+  },
+  "trackClear": {
+    "message": "赛道空闲"
+  },
+  "yellowFlag": {
+    "message": "黄旗"
+  },
+  "safetyCar": {
+    "message": "安全车"
+  },
+  "scMessage": {
+    "message": "赛道上有赛车 - 速度降低"
+  },
+  "redFlag": {
+    "message": "红旗"
+  },
+  "sessionSuspended": {
+    "message": "课程暂停"
+  },
+  "vsc": {
+    "message": "VSC"
+  },
+  "vscMessage": {
+    "message": "降低速度 40%"
+  },
+  "vscEnding": {
+    "message": "VSC 即将结束"
+  },
+  "prepareRestart": {
+    "message": "准备重新开始"
+  },
+  "scEnding": {
+    "message": "SC 即将结束"
+  },
+  "scEndingMessage": {
+    "message": "最大紧张感 - SC 即将进站"
+  },
+  "dangerSector": {
+    "message": "扇区危险"
+  },
+  "incidentOnTrack": {
+    "message": "赛道事故"
+  },
+  "leaderChanged": {
+    "message": "领跑者已变更"
+  },
+  "newP1": {
+    "message": "是新的 P1！"
+  },
+  "liveTitle": {
+    "message": "直播："
+  },
+  "resultTitle": {
+    "message": "结果： "
+  },
+  "final": {
+    "message": "决赛"
+  },
+  "dayAbbr": {
+    "message": "天"
+  },
+  "hourAbbr": {
+    "message": "时"
+  },
+  "minAbbr": {
+    "message": "分"
+  },
+  "secAbbr": {
+    "message": "秒"
+  },
+  "sessionLive": {
+    "message": "课程直播中"
+  },
+  "sessionStarted": {
+    "message": "已开始："
+  },
+  "p1": {
+    "message": "P1"
+  },
+  "driverPlaceholder": {
+    "message": "车手"
+  }
+}

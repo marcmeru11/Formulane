@@ -1,0 +1,181 @@
+{
+  "extName": {
+    "message": "Formulane",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "Real-time F1 telemetry and race control alerts.",
+    "description": "The description of the extension."
+  },
+  "noData": {
+    "message": "NO DATA"
+  },
+  "offline": {
+    "message": "OFFLINE"
+  },
+  "live": {
+    "message": "LIVE"
+  },
+  "status": {
+    "message": "STATUS"
+  },
+  "raceControl": {
+    "message": "RACE CONTROL"
+  },
+  "upcomingSession": {
+    "message": "UPCOMING SESSION"
+  },
+  "waitingData": {
+    "message": "WAITING FOR SESSION DATA..."
+  },
+  "onTrack": {
+    "message": "ON TRACK!"
+  },
+  "settingsTitle": {
+    "message": "Formulive Settings"
+  },
+  "settingsHeader": {
+    "message": "SETTINGS"
+  },
+  "syncSection": {
+    "message": "Synchronization"
+  },
+  "refreshInterval": {
+    "message": "Refresh Interval"
+  },
+  "refreshDesc": {
+    "message": "Telemetry update frequency"
+  },
+  "minutes": {
+    "message": "MIN"
+  },
+  "displaySection": {
+    "message": "Display"
+  },
+  "driversOnScreen": {
+    "message": "Drivers on Screen"
+  },
+  "driversDesc": {
+    "message": "Number of drivers to show on podium"
+  },
+  "notificationsSection": {
+    "message": "Notifications"
+  },
+  "sessionStart": {
+    "message": "Session Start"
+  },
+  "sessionStartDesc": {
+    "message": "Alert when a session goes LIVE"
+  },
+  "leaderChange": {
+    "message": "Leader Change"
+  },
+  "leaderChangeDesc": {
+    "message": "Alert when P1 driver is overtaken"
+  },
+  "trackIncidents": {
+    "message": "Track Incidents (SC/VSC)"
+  },
+  "trackIncidentsDesc": {
+    "message": "Alert about Safety Car, VSC and Red Flags"
+  },
+  "raceControlAlerts": {
+    "message": "Race Control"
+  },
+  "raceControlDesc": {
+    "message": "Investigations, penalties and DRS enabled"
+  },
+  "saveChanges": {
+    "message": "SAVE CHANGES"
+  },
+  "settingsSaved": {
+    "message": "Settings saved successfully"
+  },
+  "errorInvalidInterval": {
+    "message": "Error: Invalid interval"
+  },
+  "clear": {
+    "message": "CLEAR"
+  },
+  "trackClear": {
+    "message": "TRACK CLEAR"
+  },
+  "yellowFlag": {
+    "message": "YELLOW FLAG"
+  },
+  "safetyCar": {
+    "message": "SAFETY CAR"
+  },
+  "scMessage": {
+    "message": "CAR ON TRACK - PACE REDUCED"
+  },
+  "redFlag": {
+    "message": "RED FLAG"
+  },
+  "sessionSuspended": {
+    "message": "SESSION SUSPENDED"
+  },
+  "vsc": {
+    "message": "VSC"
+  },
+  "vscMessage": {
+    "message": "REDUCE SPEED 40%"
+  },
+  "vscEnding": {
+    "message": "VSC ENDING"
+  },
+  "prepareRestart": {
+    "message": "PREPARE FOR RESTART"
+  },
+  "scEnding": {
+    "message": "SC ENDING"
+  },
+  "scEndingMessage": {
+    "message": "MAXIMUM TENSION - SC ENTERING"
+  },
+  "dangerSector": {
+    "message": "DANGER IN SECTOR"
+  },
+  "incidentOnTrack": {
+    "message": "INCIDENT ON TRACK"
+  },
+  "leaderChanged": {
+    "message": "LEADER CHANGED"
+  },
+  "newP1": {
+    "message": "is the new P1!"
+  },
+  "liveTitle": {
+    "message": "LIVE:"
+  },
+  "resultTitle": {
+    "message": "RESULT:"
+  },
+  "final": {
+    "message": "FINAL"
+  },
+  "dayAbbr": {
+    "message": "D"
+  },
+  "hourAbbr": {
+    "message": "H"
+  },
+  "minAbbr": {
+    "message": "M"
+  },
+  "secAbbr": {
+    "message": "S"
+  },
+  "sessionLive": {
+    "message": "SESSION LIVE"
+  },
+  "sessionStarted": {
+    "message": "Has started:"
+  },
+  "p1": {
+    "message": "P1"
+  },
+  "driverPlaceholder": {
+    "message": "DRIVER"
+  }
+}

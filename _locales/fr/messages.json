@@ -1,0 +1,181 @@
+{
+  "extName": {
+    "message": "Formulane",
+    "description": "The name of the extension."
+  },
+  "extDescription": {
+    "message": "Télémétrie F1 en temps réel et alertes de la direction de course.",
+    "description": "The description of the extension."
+  },
+  "noData": {
+    "message": "PAS DE DONNÉES"
+  },
+  "offline": {
+    "message": "HORS LIGNE"
+  },
+  "live": {
+    "message": "EN DIRECT"
+  },
+  "status": {
+    "message": "STATUT"
+  },
+  "raceControl": {
+    "message": "DIRECTION DE COURSE"
+  },
+  "upcomingSession": {
+    "message": "SESSION À VENIR"
+  },
+  "waitingData": {
+    "message": "EN ATTENTE DES DONNÉES DE LA SESSION..."
+  },
+  "onTrack": {
+    "message": "EN PISTE !"
+  },
+  "settingsTitle": {
+    "message": "Paramètres Formulive"
+  },
+  "settingsHeader": {
+    "message": "PARAMÈTRES"
+  },
+  "syncSection": {
+    "message": "Synchronisation"
+  },
+  "refreshInterval": {
+    "message": "Intervalle de rafraîchissement"
+  },
+  "refreshDesc": {
+    "message": "Fréquence de mise à jour de la télémétrie"
+  },
+  "minutes": {
+    "message": "MIN"
+  },
+  "displaySection": {
+    "message": "Affichage"
+  },
+  "driversOnScreen": {
+    "message": "Pilotes à l'écran"
+  },
+  "driversDesc": {
+    "message": "Nombre de pilotes à afficher sur le podium"
+  },
+  "notificationsSection": {
+    "message": "Notifications"
+  },
+  "sessionStart": {
+    "message": "Début de session"
+  },
+  "sessionStartDesc": {
+    "message": "Alerter quand une session passe EN DIRECT"
+  },
+  "leaderChange": {
+    "message": "Changement de leader"
+  },
+  "leaderChangeDesc": {
+    "message": "Alerter quand le pilote en P1 est dépassé"
+  },
+  "trackIncidents": {
+    "message": "Incidents en piste (SC/VSC)"
+  },
+  "trackIncidentsDesc": {
+    "message": "Alerter sur la Safety Car, le VSC et les drapeaux rouges"
+  },
+  "raceControlAlerts": {
+    "message": "Direction de course"
+  },
+  "raceControlDesc": {
+    "message": "Enquêtes, pénalités et DRS activé"
+  },
+  "saveChanges": {
+    "message": "ENREGISTRER LES MODIFICATIONS"
+  },
+  "settingsSaved": {
+    "message": "Paramètres enregistrés avec succès"
+  },
+  "errorInvalidInterval": {
+    "message": "Erreur : Intervalle invalide"
+  },
+  "clear": {
+    "message": "DÉGAGÉ"
+  },
+  "trackClear": {
+    "message": "PISTE DÉGAGÉE"
+  },
+  "yellowFlag": {
+    "message": "DRAPEAU JAUNE"
+  },
+  "safetyCar": {
+    "message": "VOITURE DE SÉCURITÉ"
+  },
+  "scMessage": {
+    "message": "VOITURE EN PISTE - RYTHME RÉDUIT"
+  },
+  "redFlag": {
+    "message": "DRAPEAU ROUGE"
+  },
+  "sessionSuspended": {
+    "message": "SESSION SUSPENDUE"
+  },
+  "vsc": {
+    "message": "VSC"
+  },
+  "vscMessage": {
+    "message": "RÉDUIRE LA VITESSE DE 40 %"
+  },
+  "vscEnding": {
+    "message": "FIN DU VSC"
+  },
+  "prepareRestart": {
+    "message": "PRÉPARER LA RELANCE"
+  },
+  "scEnding": {
+    "message": "FIN DE LA SC"
+  },
+  "scEndingMessage": {
+    "message": "TENSION MAXIMALE - ENTRÉE DE LA SC"
+  },
+  "dangerSector": {
+    "message": "DANGER DANS LE SECTEUR"
+  },
+  "incidentOnTrack": {
+    "message": "INCIDENT EN PISTE"
+  },
+  "leaderChanged": {
+    "message": "CHANGEMENT DE LEADER"
+  },
+  "newP1": {
+    "message": "est le nouveau P1 !"
+  },
+  "liveTitle": {
+    "message": "EN DIRECT : "
+  },
+  "resultTitle": {
+    "message": "RÉSULTAT : "
+  },
+  "final": {
+    "message": "FINAL"
+  },
+  "dayAbbr": {
+    "message": "J"
+  },
+  "hourAbbr": {
+    "message": "H"
+  },
+  "minAbbr": {
+    "message": "M"
+  },
+  "secAbbr": {
+    "message": "S"
+  },
+  "sessionLive": {
+    "message": "SESSION EN DIRECT"
+  },
+  "sessionStarted": {
+    "message": "A commencé :"
+  },
+  "p1": {
+    "message": "P1"
+  },
+  "driverPlaceholder": {
+    "message": "PILOTE"
+  }
+}
