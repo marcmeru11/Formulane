@@ -18,7 +18,7 @@ body {
     linear-gradient(90deg, var(--glass) 1px, transparent 1px);
   background-size: 30px 30px;
   color: var(--text);
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   line-height: 1.5;
   display: flex;
   justify-content: center;
@@ -58,16 +58,16 @@ body {
 header {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
 }
 
 header h1 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 1px;
   margin: 0;
   text-transform: uppercase;
   background: linear-gradient(90deg, #fff, #888);
@@ -77,15 +77,15 @@ header h1 {
 }
 
 .logo-circle {
-  padding: 6px 15px;
+  padding: 4px 12px;
   background: var(--f1-red);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 15px;
-  letter-spacing: 1px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   box-shadow: 0 0 15px rgba(225, 6, 0, 0.3);
   white-space: nowrap;
