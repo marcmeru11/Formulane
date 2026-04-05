@@ -177,5 +177,11 @@
   },
   "driverPlaceholder": {
     "message": "سائق"
+  },
+  "viewRepo": {
+    "message": "عرض على GitHub"
+  },
+  "repoLabel": {
+    "message": "المستودع"
   }
 }

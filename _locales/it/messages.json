@@ -177,5 +177,11 @@
   },
   "driverPlaceholder": {
     "message": "PILOTA"
+  },
+  "viewRepo": {
+    "message": "Visualizza su GitHub"
+  },
+  "repoLabel": {
+    "message": "REPOSITORIO"
   }
 }

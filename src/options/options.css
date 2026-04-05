@@ -77,16 +77,18 @@ header h1 {
 }
 
 .logo-circle {
-  width: 40px;
-  height: 40px;
+  padding: 6px 15px;
   background: var(--f1-red);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   box-shadow: 0 0 15px rgba(225, 6, 0, 0.3);
+  white-space: nowrap;
 }
 
 .settings-card {
@@ -223,11 +225,43 @@ option {
 
 footer {
   margin-top: 40px;
-  padding-top: 15px;
+  padding-top: 20px;
   border-top: 1px solid var(--border);
-  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 10px;
   color: var(--text-muted);
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.repo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+}
+
+.repo-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--f1-red);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(225, 6, 0, 0.2);
+}
+
+.github-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }

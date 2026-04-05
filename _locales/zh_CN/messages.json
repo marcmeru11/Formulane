@@ -177,5 +177,11 @@
   },
   "driverPlaceholder": {
     "message": "车手"
+  },
+  "viewRepo": {
+    "message": "在 GitHub 上查看"
+  },
+  "repoLabel": {
+    "message": "代码库"
   }
 }
