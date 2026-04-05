@@ -1,259 +1,177 @@
 :root { 
-  --f1-red: #ff1801; 
+  --f1-red: #e10600; 
+  --f1-black: #15151e;
+  --f1-dark: #1f1f27;
   --gold: #ffd700; 
   --silver: #94a3b8; 
   --bronze: #92400e; 
   --bg: #0b0b10; 
-  --card: rgba(31, 31, 39, 0.7); 
-  --glass: rgba(255, 255, 255, 0.03);
-  --border: rgba(255, 255, 255, 0.1);
+  --card: rgba(21, 21, 30, 0.95); 
+  --glass: rgba(255, 255, 255, 0.02);
+  --border: rgba(255, 255, 255, 0.12);
 }
 
-body { 
+/* 1. BASE - Fixes the infinite stretch and scrollbar */
+html, body { 
+  background-color: var(--bg) !important;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: auto; /* Allow content to define height */
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden; /* Totally kills the scrollbar */
+}
+
+/* 2. MAIN CONTAINER */
+#main-container { 
   width: 300px; 
+  display: flex;
+  flex-direction: column;
   background: var(--bg); 
   color: white; 
-  font-family: 'Orbitron', sans-serif; 
-  margin: 0; 
   border-top: 4px solid var(--f1-red);
+  position: relative;
+  /* Subtle technical grid - limited to prevent stretching */
   background-image: 
-    linear-gradient(var(--glass) 1px, transparent 1px),
-    linear-gradient(90deg, var(--glass) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 20px 20px;
-  overflow-x: hidden;
+  background-attachment: local;
 }
 
-/* Header Modernizado */
+/* 3. HEADER - Professional HUD */
 .header { 
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
   padding: 12px 15px; 
-  background: linear-gradient(180deg, rgba(31, 31, 39, 0.9) 0%, var(--bg) 100%); 
+  background: var(--f1-dark);
   border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 #title {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #eee;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
   text-transform: uppercase;
+  border-left: 3px solid var(--f1-red);
+  padding-left: 8px;
 }
 
 .status-group {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.settings-icon svg { 
+  width: 16px; 
+  height: 16px; 
+  fill: rgba(255, 255, 255, 0.4);
+  transition: fill 0.2s;
+  cursor: pointer;
+}
+
+.settings-icon:hover svg {
+  fill: var(--f1-red);
 }
 
 .status-indicator {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 10px;
-  font-weight: 700;
-  color: #888;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
 }
 
-.status-dot { 
-  width: 6px; 
-  height: 6px; 
-  background: #444; 
-  border-radius: 50%; 
-}
-
-.live .status-dot { 
-  background: var(--f1-red); 
-  box-shadow: 0 0 8px var(--f1-red);
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.3); opacity: 0.6; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.settings-icon { 
-  cursor: pointer; 
-  opacity: 0.5; 
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex; 
-  align-items: center; 
-}
-.settings-icon:hover { 
-  opacity: 1; 
-  transform: rotate(90deg) scale(1.1);
-  color: var(--f1-red);
-}
-.settings-icon svg { width: 16px; height: 16px; fill: currentColor; }
-
-/* Podio Optimizado con Glassmorphism */
+/* 4. DRIVER HUD CARDS */
 .container { 
-  padding: 15px; 
+  padding: 12px; 
   display: flex;
   flex-direction: column;
   gap: 8px;
-  min-height: 100px;
 }
 
 .driver-row { 
   display: flex; 
   align-items: center; 
   background: var(--card); 
-  padding: 10px 14px; 
-  border-radius: 6px; 
+  padding: 8px 12px; 
   position: relative; 
-  overflow: hidden; 
-  border: 1px solid var(--border);
-  backdrop-filter: blur(5px);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-  animation: slideIn 0.5s ease-out forwards;
-  opacity: 0;
-}
-
-@keyframes slideIn {
-  from { transform: translateX(30px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  /* F1 HUD Cut: Slanted top-right corner */
+  clip-path: polygon(0% 0%, 93% 0%, 100% 25%, 100% 100%, 0% 100%);
+  border-radius: 4px;
+  border-left: 4px solid var(--f1-red);
+  transition: transform 0.2s, background 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .driver-row:hover {
-  transform: scale(1.02);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.driver-row::before { 
-  content: ''; 
-  position: absolute; 
-  left: 0; 
-  top: 0; 
-  bottom: 0; 
-  width: 4px; 
-  background: var(--accent);
+  transform: translateX(4px);
+  background: var(--f1-dark);
 }
 
 .pos { 
-  width: 32px; 
-  font-size: 20px; 
-  font-weight: 700; 
+  width: 25px; 
+  font-size: 18px; 
+  font-weight: 900; 
   font-style: italic;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  color: #fff;
 }
 
-.name-box { flex-grow: 1; margin-left: 10px; }
-.name { 
-  font-size: 16px; 
-  font-weight: 700;
-  text-transform: uppercase; 
-  line-height: 1.1; 
-  letter-spacing: 1px; 
-}
-.team { 
-  font-size: 10px; 
-  opacity: 0.5; 
-  font-weight: 600;
-  text-transform: uppercase; 
-  margin-top: 2px;
-  letter-spacing: 0.5px;
-}
+.name-box { flex-grow: 1; margin-left: 8px; }
+.name { font-size: 13px; font-weight: 800; text-transform: uppercase; }
+.team { font-size: 8px; opacity: 0.5; font-weight: 600; text-transform: uppercase; }
 
 .status-badge {
-  font-size: 9px;
-  font-weight: 700;
+  font-size: 8px;
+  font-weight: 900;
   padding: 2px 6px;
-  border-radius: 2px;
-  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--f1-red);
   color: var(--f1-red);
-  letter-spacing: 0.5px;
-  border: 1px solid rgba(225, 6, 0, 0.2);
+  margin-right: 12px;
 }
 
-/* Track Status Banner */
-#track-banner {
-  display: none; /* Hidden by default */
-  padding: 8px 15px;
-  margin: 0;
-  color: #000;
-  font-weight: 700;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 2px solid rgba(0,0,0,0.2);
-  animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(0); }
-}
-
-#track-label {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 2px;
-}
-
-#track-msg {
-  font-size: 9px;
-  opacity: 0.8;
-  font-weight: 600;
-}
-
-.pulse-bg {
-  animation: pulseAlert 1s infinite alternate;
-}
-
-@keyframes pulseAlert {
-  from { opacity: 0.7; }
-  to { opacity: 1; }
-}
-
-/* Footer con Estilo de Tablero */
+/* 5. FOOTER - Next Race Info */
 .next-race { 
-  background: linear-gradient(0deg, #000 0%, #0b0b10 100%); 
-  padding: 15px; 
+  background: var(--f1-black);
+  padding: 12px 15px;
   border-top: 1px solid var(--border); 
 }
+
 .label { 
-  font-size: 10px; 
-  color: #666; 
+  font-size: 8px; 
+  color: var(--f1-red); 
   text-transform: uppercase; 
-  font-weight: 700; 
+  font-weight: 800; 
   margin-bottom: 6px; 
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
+
 .race-info { 
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
 }
+
 #race-name { 
-  font-size: 12px; 
+  font-size: 10px; 
   font-weight: 700; 
-  color: #ddd; 
-  max-width: 55%; 
-  white-space: nowrap; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-}
-#timer { 
-  font-size: 12px; 
-  font-weight: 700; 
-  color: #fff; 
-  font-family: 'Orbitron', sans-serif;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 4px 8px;
-  border-radius: 4px;
-  border: 1px solid var(--border);
+  color: #fff;
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
-  flex-shrink: 0;
+}
+
+#timer { 
+  font-size: 11px; 
+  font-weight: 800; 
+  color: #fff; 
+  background: #000;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
 }
