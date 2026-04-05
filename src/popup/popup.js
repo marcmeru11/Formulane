@@ -58,13 +58,13 @@ function render() {
                 </div>`;
         } else {
             elements.podium.innerHTML = data.podium.map((d, index) => `
-                <div class="driver-row" style="border-left-color: ${d.color}; animation-delay: ${index * 0.1}s">
-                    <div class="pos" style="color: ${d.color}">${d.pos}</div>
-                    <div class="name-box">
+                <div class="driver-card" style="--team-color: ${d.color}; --team-glow: ${d.color}33; --delay: ${index * 0.1}s">
+                    <div class="pos-badge">${d.pos}</div>
+                    <div class="driver-info">
                         <div class="name">${d.name}</div>
                         <div class="team">${d.team}</div>
                     </div>
-                    <div class="status-badge">${d.val}</div>
+                    <div class="data-value">${d.val}</div>
                 </div>
             `).join('');
         }

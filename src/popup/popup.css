@@ -1,157 +1,253 @@
 :root { 
   --f1-red: #e10600; 
-  --f1-black: #15151e;
-  --f1-dark: #1f1f27;
-  --gold: #ffd700; 
-  --silver: #94a3b8; 
-  --bronze: #92400e; 
-  --bg: #0b0b10; 
-  --card: rgba(21, 21, 30, 0.95); 
-  --glass: rgba(255, 255, 255, 0.02);
-  --border: rgba(255, 255, 255, 0.12);
+  --teal: #00d2be;
+  --bg-dark: #050508;
+  --panel-bg: rgba(13, 13, 18, 0.7);
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --orbitron: 'Orbitron', sans-serif;
+  --outfit: 'Outfit', sans-serif;
 }
 
-/* 1. BASE - Floating UI with Transparency */
+/* 1. BASE */
 html, body { 
   background: transparent !important; 
   margin: 0;
   padding: 0;
-  width: 350px; /* Increased from 300px */
-  font-family: 'Orbitron', sans-serif;
+  width: 360px;
+  font-family: var(--outfit);
+  color: var(--text-primary);
   overflow: hidden; 
 }
 
-/* 2. MAIN CONTAINER - Rounded & Impactful */
 #main-container { 
-  width: 346px; /* Width minus 4px (left+right margins) */
-  margin: 2px;
+  width: 100%;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
-  background: var(--bg); 
-  color: white; 
-  border-radius: 12px;
-  overflow: hidden;
-  border-top: 4px solid var(--f1-red);
-  border: 1px solid var(--border);
-  box-shadow: 0 15px 45px rgba(0,0,0,0.8);
+  background: var(--bg-dark);
   position: relative;
-  /* Subtle technical grid */
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 20px 20px;
-  background-attachment: local;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
-/* 3. HEADER - Professional HUD */
+/* Decorative Background Mesh */
+.bg-mesh {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: 
+    radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 2. HEADER - Mission Control Style */
 .header { 
+  position: relative;
+  z-index: 10;
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
-  padding: 12px 15px; 
-  background: var(--f1-dark);
-  border-bottom: 1px solid var(--border);
+  padding: 20px 18px; 
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
 }
 
 #title {
-  font-size: 13px; /* Increased from 10px */
-  font-weight: 900;
-  letter-spacing: 1.5px;
-  color: #fff;
+  font-family: var(--orbitron);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  border-left: 4px solid var(--f1-red);
-  padding-left: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+#title::before {
+  content: '';
+  width: 3px;
+  height: 14px;
+  background: var(--f1-red);
+  margin-right: 8px;
+  box-shadow: 0 0 10px var(--f1-red);
 }
 
 .status-group {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
+  align-items: center;
+  gap: 12px;
 }
 
 .settings-icon svg { 
-  width: 16px; 
-  height: 16px; 
-  fill: rgba(255, 255, 255, 0.4);
-  transition: fill 0.2s;
+  width: 18px; 
+  height: 18px; 
+  fill: var(--text-secondary);
+  transition: all 0.3s;
   cursor: pointer;
 }
 
 .settings-icon:hover svg {
-  fill: var(--f1-red);
+  fill: #fff;
+  transform: rotate(45deg);
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
 }
 
 .status-indicator {
-  font-size: 7px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  opacity: 0.6;
-}
-
-/* 4. DRIVER HUD CARDS */
-.container { 
-  padding: 12px; 
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.driver-row { 
-  display: flex; 
-  align-items: center; 
-  background: var(--card); 
-  padding: 12px 16px; /* Increased padding */
-  position: relative; 
-  /* F1 HUD Cut: Slanted top-right corner */
-  clip-path: polygon(0% 0%, 93% 0%, 100% 25%, 100% 100%, 0% 100%);
-  border-radius: 4px;
-  border-left: 5px solid var(--f1-red); /* Thicker indicator */
-  transition: all 0.2s;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.driver-row:hover {
-  transform: translateX(6px);
-  background: var(--f1-dark);
-}
-
-.pos { 
-  width: 32px; /* Increased */
-  font-size: 24px; /* Significantly increased from 18px */
-  font-weight: 900; 
-  font-style: italic;
-  color: #fff;
-}
-
-.name-box { flex-grow: 1; margin-left: 12px; }
-.name { font-size: 16px; font-weight: 900; text-transform: uppercase; }
-.team { font-size: 10px; opacity: 0.6; font-weight: 700; text-transform: uppercase; margin-top: 2px; }
-
-.status-badge {
+  font-family: var(--orbitron);
   font-size: 8px;
   font-weight: 900;
-  padding: 2px 6px;
-  border: 1px solid var(--f1-red);
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+}
+
+body.live .status-indicator {
   color: var(--f1-red);
-  margin-right: 12px;
+  border-color: rgba(225, 6, 0, 0.3);
+  background: rgba(225, 6, 0, 0.05);
 }
 
-/* 5. FOOTER - Next Race Info */
+/* 3. TRACK BANNER - High Alert */
+#track-banner {
+  position: relative;
+  z-index: 10;
+  margin: 0 15px 15px 15px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: slideDown 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+#track-label {
+  font-family: var(--orbitron);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+#track-msg {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* 4. DRIVER CARDS - Aero HUD */
+.container { 
+  position: relative;
+  z-index: 10;
+  padding: 0 15px 20px 15px; 
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 380px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar { display: none; }
+
+.driver-card { 
+  display: flex; 
+  align-items: center; 
+  background: var(--panel-bg);
+  backdrop-filter: blur(8px);
+  padding: 14px 18px; 
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cardEntrance 0.5s ease-out both;
+  animation-delay: var(--delay);
+}
+
+.driver-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 50%;
+  width: 4px;
+  background: var(--team-color);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 2px 0 15px var(--team-color);
+}
+
+.driver-card:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 0 20px var(--team-glow);
+}
+
+.pos-badge { 
+  font-family: var(--orbitron);
+  font-size: 22px; 
+  font-weight: 900; 
+  font-style: italic;
+  width: 35px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.driver-info { flex-grow: 1; margin-left: 10px; }
+
+.driver-info .name { 
+  font-family: var(--orbitron);
+  font-size: 15px; 
+  font-weight: 800; 
+  text-transform: uppercase; 
+  letter-spacing: 0.5px;
+}
+
+.driver-info .team { 
+  font-size: 10px; 
+  color: var(--text-secondary); 
+  font-weight: 500; 
+  text-transform: uppercase; 
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+
+.data-value {
+  font-family: var(--orbitron);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  color: #fff;
+  border: 1px solid var(--glass-border);
+}
+
+/* 5. FOOTER - Next Event */
 .next-race { 
-  background: var(--f1-black);
-  padding: 12px 15px;
-  border-top: 1px solid var(--border); 
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  padding: 20px 18px;
+  border-top: 1px solid var(--glass-border);
 }
 
-.label { 
-  font-size: 8px; 
+.next-race .label { 
+  font-family: var(--orbitron);
+  font-size: 9px; 
   color: var(--f1-red); 
   text-transform: uppercase; 
-  font-weight: 800; 
-  margin-bottom: 6px; 
-  letter-spacing: 1.5px;
+  font-weight: 900; 
+  margin-bottom: 10px; 
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(225, 6, 0, 0.3);
 }
 
 .race-info { 
@@ -161,21 +257,43 @@ html, body {
 }
 
 #race-name { 
-  font-size: 10px; 
+  font-size: 12px; 
   font-weight: 700; 
-  color: #fff;
-  max-width: 130px;
+  max-width: 160px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 #timer { 
-  font-size: 11px; 
+  font-family: var(--orbitron);
+  font-size: 12px; 
   font-weight: 800; 
   color: #fff; 
-  background: #000;
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.05);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* ANIMATIONS */
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes cardEntrance {
+  from { transform: translateX(30px); opacity: 0; filter: blur(5px); }
+  to { transform: translateX(0); opacity: 1; filter: blur(0); }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pulse-bg {
+  animation: heartbeat 1.5s infinite ease-in-out;
 }
