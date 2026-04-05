@@ -35,58 +35,58 @@
     "message": "Настройки Formulive"
   },
   "settingsHeader": {
-    "message": "НАСТРОЙКИ"
+    "message": "ЦЕНТР УПРАВЛЕНИЯ"
   },
   "syncSection": {
-    "message": "Синхронизация"
+    "message": "СИНХРОНИЗАЦИЯ ДВИГАТЕЛЯ"
   },
   "refreshInterval": {
-    "message": "Интервал обновления"
+    "message": "ИНТЕРВАЛ ОБНОВЛЕНИЯ"
   },
   "refreshDesc": {
-    "message": "Частота обновления телеметрии"
+    "message": "Частота обновления телеметрии c OpenF1"
   },
   "minutes": {
     "message": "МИН"
   },
   "displaySection": {
-    "message": "Отображение"
+    "message": "ОТОБРАЖЕНИЕ ДАННЫХ"
   },
   "driversOnScreen": {
-    "message": "Пилотов на экране"
+    "message": "ГЛУБИНА ПОДИУМА"
   },
   "driversDesc": {
-    "message": "Количество пилотов на подиуме"
+    "message": "Количество пилотов, отображаемых в HUD"
   },
   "notificationsSection": {
-    "message": "Уведомления"
+    "message": "ОПОВЕЩЕНИЯ И ТРАНСЛЯЦИЯ"
   },
   "sessionStart": {
-    "message": "Начало сессии"
+    "message": "СТАТУС СЕССИИ"
   },
   "sessionStartDesc": {
     "message": "Оповещать о переходе сессии в ПРЯМОЙ ЭФИР"
   },
   "leaderChange": {
-    "message": "Смена лидера"
+    "message": "СМЕНА ЛИДЕРА"
   },
   "leaderChangeDesc": {
     "message": "Оповещать об обгоне и потере P1"
   },
   "trackIncidents": {
-    "message": "Инциденты на трассе (SC/VSC)"
+    "message": "ИНЦИДЕНТЫ НА ТРАССЕ"
   },
   "trackIncidentsDesc": {
     "message": "Оповещать о сейфти-каре, VSC и красных флагах"
   },
   "raceControlAlerts": {
-    "message": "Дирекция гонки"
+    "message": "УПРАВЛЕНИЕ ГОНКОЙ"
   },
   "raceControlDesc": {
     "message": "Расследования, штрафы и активация DRS"
   },
   "saveChanges": {
-    "message": "СОХРАНИТЬ ИЗМЕНЕНИЯ"
+    "message": "ПРИМЕНИТЬ КОНФИГУРАЦИЮ"
   },
   "settingsSaved": {
     "message": "Настройки успешно сохранены"
@@ -179,7 +179,7 @@
     "message": "ПИЛОТ"
   },
   "viewRepo": {
-    "message": "Посмотреть на GitHub"
+    "message": "ИСХОДНЫЙ КОД"
   },
   "repoLabel": {
     "message": "РЕПОЗИТОРИЙ"

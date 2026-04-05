@@ -55,17 +55,18 @@ body {
 /* 3. MAIN CONTAINER */
 .app-container {
     width: 100%;
-    max-width: 480px;
+    max-width: 650px; /* Increased from 480px */
     background: var(--panel-bg);
     border: 1px solid var(--border-color);
-    box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+    box-shadow: 0 40px 120px rgba(0,0,0,0.9);
     position: relative;
     overflow: hidden;
+    margin: 20px auto;
 }
 
 .main-header {
-    padding: 25px 30px;
-    border-bottom: 1px solid var(--border-color);
+    padding: 35px 40px; /* Increased padding */
+    border-bottom: 2px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,38 +74,38 @@ body {
 
 .brand h1 {
     margin: 0;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 24px; /* Increased from 16px */
+    letter-spacing: 3px;
     font-weight: 900;
 }
 
 .brand h1 small {
     display: block;
-    font-size: 8px;
+    font-size: 10px; /* Increased from 8px */
     color: var(--f1-red);
-    letter-spacing: 1px;
-    margin-top: 2px;
+    letter-spacing: 2px;
+    margin-top: 4px;
 }
 
 .version {
-    font-size: 8px;
+    font-size: 10px;
     color: var(--text-secondary);
     border: 1px solid var(--border-color);
-    padding: 3px 6px;
-    opacity: 0.6;
+    padding: 4px 8px;
+    opacity: 0.8;
 }
 
 /* 4. CONFIGURATION CARDS */
 .config-card {
-    padding: 20px 30px;
+    padding: 30px 40px; /* Increased from 20/30 */
     border-bottom: 1px solid var(--border-color);
 }
 
 .section-title {
-    font-size: 9px;
+    font-size: 12px; /* Increased from 9px */
     color: var(--text-secondary);
-    letter-spacing: 1.5px;
-    margin: 0 0 15px 0;
+    letter-spacing: 2px;
+    margin: 0 0 20px 0;
     text-transform: uppercase;
 }
 
@@ -116,30 +117,32 @@ body {
 
 .info label {
     display: block;
-    font-size: 11px;
+    font-size: 16px; /* Increased from 11px */
     font-weight: 700;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     text-transform: uppercase;
 }
 
 .info p {
     margin: 0;
-    font-size: 9px;
+    font-size: 12px; /* Increased from 9px */
     color: var(--text-secondary);
+    line-height: 1.4;
 }
 
-/* 5. SELECT & INPUT CONTROLS (Fixed visibility) */
+/* 5. SELECT & INPUT CONTROLS */
 .control {
     display: flex;
     align-items: center;
     background: #000000;
-    border: 1px solid var(--border-color);
-    padding: 4px 8px;
-    transition: border-color 0.2s;
+    border: 2px solid var(--border-color); /* Thicker border */
+    padding: 8px 16px; /* Larger padding */
+    transition: all 0.2s;
 }
 
 .control:focus-within {
     border-color: var(--f1-red);
+    box-shadow: 0 0 15px rgba(225, 6, 0, 0.2);
 }
 
 input[type="number"], select {
@@ -147,7 +150,7 @@ input[type="number"], select {
     color: #ffffff !important;
     border: none;
     font-family: 'Orbitron', sans-serif;
-    font-size: 11px;
+    font-size: 16px; /* Significantly increased from 11px */
     font-weight: 700;
     outline: none;
     padding: 5px;
@@ -182,7 +185,7 @@ select option {
 
 .toggle-item {
     background: var(--card-bg);
-    padding: 12px;
+    padding: 18px 24px; /* Scaled up padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -192,27 +195,31 @@ select option {
 
 .toggle-item:hover {
     border-color: var(--f1-red);
-    background: rgba(225, 6, 0, 0.05);
+    background: rgba(225, 6, 0, 0.08);
 }
 
-.toggle-item label { font-size: 9px; font-weight: 700; letter-spacing: 0.5px; }
+.toggle-item label { 
+    font-size: 12px; /* Increased from 9px */
+    font-weight: 700; 
+    letter-spacing: 0.8px; 
+}
 
 /* 7. ACTION ZONE */
-.action-zone { padding: 25px 30px; text-align: center; }
+.action-zone { padding: 40px; text-align: center; }
 
 .btn-save {
     width: 100%;
     background: var(--f1-red);
     color: white;
     border: none;
-    padding: 16px;
+    padding: 22px; /* Increased padding */
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
-    font-size: 11px;
-    letter-spacing: 2px;
+    font-size: 14px; /* Increased from 11px */
+    letter-spacing: 3px;
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: 0 0 15px var(--accent-glow);
+    box-shadow: 0 0 25px var(--accent-glow);
 }
 
 .btn-save:hover {
@@ -230,7 +237,7 @@ select option {
 }
 
 .main-footer {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     font-size: 8px;
     color: var(--text-secondary);

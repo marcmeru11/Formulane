@@ -35,58 +35,58 @@
     "message": "Impostazioni Formulive"
   },
   "settingsHeader": {
-    "message": "IMPOSTAZIONI"
+    "message": "CENTRO DI CONTROLLO"
   },
   "syncSection": {
-    "message": "Sincronizzazione"
+    "message": "SINCRONIZZAZIONE MOTORE"
   },
   "refreshInterval": {
-    "message": "Intervallo di aggiornamento"
+    "message": "INTERVALLO DI AGGIORNAMENTO"
   },
   "refreshDesc": {
-    "message": "Frequenza di aggiornamento della telemetria"
+    "message": "Frequenza degli aggiornamenti telemetrici"
   },
   "minutes": {
     "message": "MIN"
   },
   "displaySection": {
-    "message": "Visualizzazione"
+    "message": "VISUALIZZAZIONE DATI"
   },
   "driversOnScreen": {
-    "message": "Piloti sullo schermo"
+    "message": "PROFONDITÀ DEL PODIO"
   },
   "driversDesc": {
-    "message": "Numero di piloti da mostrare sul podio"
+    "message": "Piloti visualizzati nell'HUD"
   },
   "notificationsSection": {
-    "message": "Notifiche"
+    "message": "AVVISI E TRASMISSIONE"
   },
   "sessionStart": {
-    "message": "Inizio sessione"
+    "message": "STATO DELLA SESSIONE"
   },
   "sessionStartDesc": {
     "message": "Avvisa quando una sessione diventa DAL VIVO"
   },
   "leaderChange": {
-    "message": "Cambio leader"
+    "message": "CAMBI DI LEADER"
   },
   "leaderChangeDesc": {
     "message": "Avvisa quando il pilota in P1 viene sorpassato"
   },
   "trackIncidents": {
-    "message": "Incidenti in pista (SC/VSC)"
+    "message": "INCIDENTI IN PISTA"
   },
   "trackIncidentsDesc": {
     "message": "Avvisa su Safety Car, VSC e bandiere rosse"
   },
   "raceControlAlerts": {
-    "message": "Direzione gara"
+    "message": "DIREZIONE GARA"
   },
   "raceControlDesc": {
     "message": "Indagini, penalità e DRS abilitato"
   },
   "saveChanges": {
-    "message": "SALVA MODIFICHE"
+    "message": "APPLICA CONFIGURAZIONE"
   },
   "settingsSaved": {
     "message": "Impostazioni salvate con successo"
@@ -179,7 +179,7 @@
     "message": "PILOTA"
   },
   "viewRepo": {
-    "message": "Visualizza su GitHub"
+    "message": "CODICE SORGENTE"
   },
   "repoLabel": {
     "message": "REPOSITORIO"

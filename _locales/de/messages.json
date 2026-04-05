@@ -35,58 +35,58 @@
     "message": "Formulive-Einstellungen"
   },
   "settingsHeader": {
-    "message": "EINSTELLUNGEN"
+    "message": "STEUERZENTRALE"
   },
   "syncSection": {
-    "message": "Synchronisation"
+    "message": "MOTORSYNCHRONISATION"
   },
   "refreshInterval": {
-    "message": "Aktualisierungsintervall"
+    "message": "AKTUALISIERUNGSINTERVALL"
   },
   "refreshDesc": {
-    "message": "Frequenz der Telemetrie-Aktualisierung"
+    "message": "Häufigkeit der Telemetrie-Updates"
   },
   "minutes": {
     "message": "MIN"
   },
   "displaySection": {
-    "message": "Anzeige"
+    "message": "DATENANZEIGE"
   },
   "driversOnScreen": {
-    "message": "Fahrer auf dem Bildschirm"
+    "message": "PODIUMSTIEFE"
   },
   "driversDesc": {
-    "message": "Anzahl der Fahrer im Podium"
+    "message": "Im HUD angezeigte Fahrer"
   },
   "notificationsSection": {
-    "message": "Benachrichtigungen"
+    "message": "ALERTE & ÜBERTRAGUNG"
   },
   "sessionStart": {
-    "message": "Sessionsbeginn"
+    "message": "SITZUNGSSTATUS"
   },
   "sessionStartDesc": {
     "message": "Benachrichtigen, wenn Session LIVE geht"
   },
   "leaderChange": {
-    "message": "Führungswechsel"
+    "message": "FÜHRUNGSWECHSEL"
   },
   "leaderChangeDesc": {
     "message": "Benachrichtigen, wenn P1 überholt wird"
   },
   "trackIncidents": {
-    "message": "Streckenvorfälle (SC/VSC)"
+    "message": "STRECKENZWISCHENFÄLLE"
   },
   "trackIncidentsDesc": {
     "message": "Warnungen über Safety Car, VSC und Rote Flaggen"
   },
   "raceControlAlerts": {
-    "message": "Rennleitung"
+    "message": "RENNLEITUNG"
   },
   "raceControlDesc": {
     "message": "Untersuchungen, Strafen und DRS aktiviert"
   },
   "saveChanges": {
-    "message": "ÄNDERUNGEN SPEICHERN"
+    "message": "KONFIGURATION ÜBERNEHMEN"
   },
   "settingsSaved": {
     "message": "Einstellungen erfolgreich gespeichert"
@@ -178,9 +178,7 @@
   "driverPlaceholder": {
     "message": "FAHRER"
   },
-  "viewRepo": {
-    "message": "Auf GitHub ansehen"
-  },
+  "viewRepo": { "message": "QUELLCODE" },
   "repoLabel": {
     "message": "REPOSÍTORIO"
   }

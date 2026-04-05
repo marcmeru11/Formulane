@@ -35,58 +35,58 @@
     "message": "Formulive Settings"
   },
   "settingsHeader": {
-    "message": "SETTINGS"
+    "message": "CONTROL CENTER"
   },
   "syncSection": {
-    "message": "Synchronization"
+    "message": "ENGINE SYNC"
   },
   "refreshInterval": {
-    "message": "Refresh Interval"
+    "message": "REFRESH INTERVAL"
   },
   "refreshDesc": {
-    "message": "Telemetry update frequency"
+    "message": "Frequency of telemetry updates from OpenF1"
   },
   "minutes": {
     "message": "MIN"
   },
   "displaySection": {
-    "message": "Display"
+    "message": "DATA DISPLAY"
   },
   "driversOnScreen": {
-    "message": "Drivers on Screen"
+    "message": "PODIUM DEPTH"
   },
   "driversDesc": {
-    "message": "Number of drivers to show on podium"
+    "message": "Number of drivers displayed in the HUD"
   },
   "notificationsSection": {
-    "message": "Notifications"
+    "message": "ALERTS & BROADCAST"
   },
   "sessionStart": {
-    "message": "Session Start"
+    "message": "SESSION STATUS"
   },
   "sessionStartDesc": {
     "message": "Alert when a session goes LIVE"
   },
   "leaderChange": {
-    "message": "Leader Change"
+    "message": "LEADER CHANGES"
   },
   "leaderChangeDesc": {
     "message": "Alert when P1 driver is overtaken"
   },
   "trackIncidents": {
-    "message": "Track Incidents (SC/VSC)"
+    "message": "TRACK INCIDENTS"
   },
   "trackIncidentsDesc": {
     "message": "Alert about Safety Car, VSC and Red Flags"
   },
   "raceControlAlerts": {
-    "message": "Race Control"
+    "message": "RACE CONTROL"
   },
   "raceControlDesc": {
     "message": "Investigations, penalties and DRS enabled"
   },
   "saveChanges": {
-    "message": "SAVE CHANGES"
+    "message": "APPLY CONFIGURATION"
   },
   "settingsSaved": {
     "message": "Settings saved successfully"
@@ -179,7 +179,7 @@
     "message": "DRIVER"
   },
   "viewRepo": {
-    "message": "View on GitHub"
+    "message": "SOURCE CODE"
   },
   "repoLabel": {
     "message": "REPOSITORY"

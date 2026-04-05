@@ -35,58 +35,58 @@
     "message": "Paramètres Formulive"
   },
   "settingsHeader": {
-    "message": "PARAMÈTRES"
+    "message": "CENTRE DE CONTRÔLE"
   },
   "syncSection": {
-    "message": "Synchronisation"
+    "message": "SYNCHRONISATION MOTEUR"
   },
   "refreshInterval": {
-    "message": "Intervalle de rafraîchissement"
+    "message": "INTERVALLE DE RAFRAÎCHISSEMENT"
   },
   "refreshDesc": {
-    "message": "Fréquence de mise à jour de la télémétrie"
+    "message": "Fréquence des mises à jour télémétriques"
   },
   "minutes": {
     "message": "MIN"
   },
   "displaySection": {
-    "message": "Affichage"
+    "message": "AFFICHAGE DES DONNÉES"
   },
   "driversOnScreen": {
-    "message": "Pilotes à l'écran"
+    "message": "PROFONDEUR DU PODIUM"
   },
   "driversDesc": {
-    "message": "Nombre de pilotes à afficher sur le podium"
+    "message": "Pilotes affichés dans le HUD"
   },
   "notificationsSection": {
-    "message": "Notifications"
+    "message": "ALERTES & DIFFUSION"
   },
   "sessionStart": {
-    "message": "Début de session"
+    "message": "STATUT DE LA SESSION"
   },
   "sessionStartDesc": {
     "message": "Alerter quand une session passe EN DIRECT"
   },
   "leaderChange": {
-    "message": "Changement de leader"
+    "message": "CHANGEMENTS DE LEADER"
   },
   "leaderChangeDesc": {
     "message": "Alerter quand le pilote en P1 est dépassé"
   },
   "trackIncidents": {
-    "message": "Incidents en piste (SC/VSC)"
+    "message": "INCIDENTS DE PISTE"
   },
   "trackIncidentsDesc": {
     "message": "Alerter sur la Safety Car, le VSC et les drapeaux rouges"
   },
   "raceControlAlerts": {
-    "message": "Direction de course"
+    "message": "DIRECTION DE COURSE"
   },
   "raceControlDesc": {
     "message": "Enquêtes, pénalités et DRS activé"
   },
   "saveChanges": {
-    "message": "ENREGISTRER LES MODIFICATIONS"
+    "message": "APPLIQUER LA CONFIGURATION"
   },
   "settingsSaved": {
     "message": "Paramètres enregistrés avec succès"
@@ -178,9 +178,7 @@
   "driverPlaceholder": {
     "message": "PILOTE"
   },
-  "viewRepo": {
-    "message": "Voir sur GitHub"
-  },
+  "viewRepo": { "message": "CODE SOURCE" },
   "repoLabel": {
     "message": "DÉPÔT"
   }

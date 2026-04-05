@@ -35,34 +35,34 @@
     "message": "إعدادات Formulive"
   },
   "settingsHeader": {
-    "message": "الإعدادات"
+    "message": "مركز التحكم"
   },
   "syncSection": {
-    "message": "المزامنة"
+    "message": "مزامنة المحرك"
   },
   "refreshInterval": {
-    "message": "فتره التحديث"
+    "message": "فترة التحديث"
   },
   "refreshDesc": {
-    "message": "تردد تحديث البيانات"
+    "message": "تردد تحديث البيانات من OpenF1"
   },
   "minutes": {
     "message": "دقيقة"
   },
   "displaySection": {
-    "message": "العرض"
+    "message": "عرض البيانات"
   },
   "driversOnScreen": {
-    "message": "السائقين على الشاشة"
+    "message": "عمق المنصة"
   },
   "driversDesc": {
-    "message": "عدد السائقين الذين سيظهرون على المنصة"
+    "message": "عدد السائقين المعروضين في HUD"
   },
   "notificationsSection": {
-    "message": "التنبيهات"
+    "message": "التنبيهات والبث"
   },
   "sessionStart": {
-    "message": "بداية الجلسة"
+    "message": "حالة الجلسة"
   },
   "sessionStartDesc": {
     "message": "التنبيه عندما تصبح الجلسة مباشرة"
@@ -74,19 +74,19 @@
     "message": "التنبيه عندما يتم تجاوز السائق في المركز الأول"
   },
   "trackIncidents": {
-    "message": "حوادث الحلبة (SC/VSC)"
+    "message": "حوادث الحلبة"
   },
   "trackIncidentsDesc": {
-    "message": "التنبيه بشأن سيارة الأمان وVSC والأعلام الحمراء"
+    "message": "التنبيه بشأن سيارة الأمان وVSC والأعلم الحمراء"
   },
   "raceControlAlerts": {
-    "message": "إدارة السباق"
+    "message": "التحكم في السباق"
   },
   "raceControlDesc": {
     "message": "التحقيقات، العقوبات وتفعيل نظام DRS"
   },
   "saveChanges": {
-    "message": "حفظ التغييرات"
+    "message": "تطبيق التكوين"
   },
   "settingsSaved": {
     "message": "تم حفظ الإعدادات بنجاح"
@@ -179,7 +179,7 @@
     "message": "سائق"
   },
   "viewRepo": {
-    "message": "عرض على GitHub"
+    "message": "كود المصدر"
   },
   "repoLabel": {
     "message": "المستودع"

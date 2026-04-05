@@ -35,58 +35,58 @@
     "message": "Configurações Formulive"
   },
   "settingsHeader": {
-    "message": "CONFIGURAÇÕES"
+    "message": "CENTRO DE CONTROLO"
   },
   "syncSection": {
-    "message": "Sincronização"
+    "message": "SINCRONIZAÇÃO DO MOTOR"
   },
   "refreshInterval": {
-    "message": "Intervalo de Atualização"
+    "message": "INTERVALO DE ATUALIZAÇÃO"
   },
   "refreshDesc": {
-    "message": "Frequência de atualização da telemetria"
+    "message": "Frequência de atualizações de telemetria"
   },
   "minutes": {
     "message": "MIN"
   },
   "displaySection": {
-    "message": "Exibição"
+    "message": "EXIBIÇÃO DE DADOS"
   },
   "driversOnScreen": {
-    "message": "Pilotos na Tela"
+    "message": "PROFUNDIDADE DO PÓDIO"
   },
   "driversDesc": {
-    "message": "Número de pilotos para mostrar no pódio"
+    "message": "Pilotos exibidos no HUD"
   },
   "notificationsSection": {
-    "message": "Notificações"
+    "message": "ALERTAS E TRANSMISSÃO"
   },
   "sessionStart": {
-    "message": "Início da Sessão"
+    "message": "ESTADO DA SESSÃO"
   },
   "sessionStartDesc": {
     "message": "Alertar quando uma sessão ficar AO VIVO"
   },
   "leaderChange": {
-    "message": "Mudança de Líder"
+    "message": "MUDANÇAS DE LÍDER"
   },
   "leaderChangeDesc": {
     "message": "Alertar quando o piloto em P1 for ultrapassado"
   },
   "trackIncidents": {
-    "message": "Incidentes na Pista (SC/VSC)"
+    "message": "INCIDENTES NA PISTA"
   },
   "trackIncidentsDesc": {
     "message": "Alertar sobre Safety Car, VSC e Bandeiras Vermelhas"
   },
   "raceControlAlerts": {
-    "message": "Direção de Prova"
+    "message": "CONTROLO DE CORRIDA"
   },
   "raceControlDesc": {
     "message": "Investigações, penalidades e DRS ativado"
   },
   "saveChanges": {
-    "message": "SALVAR ALTERAÇÕES"
+    "message": "APLICAR CONFIGURAÇÃO"
   },
   "settingsSaved": {
     "message": "Configurações salvas com sucesso"
@@ -178,9 +178,7 @@
   "driverPlaceholder": {
     "message": "PILOTO"
   },
-  "viewRepo": {
-    "message": "Ver no GitHub"
-  },
+  "viewRepo": { "message": "CÓDIGO FONTE" },
   "repoLabel": {
     "message": "REPOSITÓRIO"
   }

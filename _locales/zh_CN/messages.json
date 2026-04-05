@@ -35,46 +35,46 @@
     "message": "Formulive 设置"
   },
   "settingsHeader": {
-    "message": "设置"
+    "message": "控制中心"
   },
   "syncSection": {
-    "message": "同步"
+    "message": "引擎同步"
   },
   "refreshInterval": {
     "message": "刷新间隔"
   },
   "refreshDesc": {
-    "message": "遥测更新频率"
+    "message": "OpenF1 遥测数据更新频率"
   },
   "minutes": {
     "message": "分钟"
   },
   "displaySection": {
-    "message": "显示"
+    "message": "数据显示"
   },
   "driversOnScreen": {
-    "message": "屏幕显示车手"
+    "message": "领奖台深度"
   },
   "driversDesc": {
-    "message": "领奖台上显示的车手数量"
+    "message": "HUD 中显示的选手数量"
   },
   "notificationsSection": {
-    "message": "通知"
+    "message": "警报与广播"
   },
   "sessionStart": {
-    "message": "课程开始"
+    "message": "分站赛状态"
   },
   "sessionStartDesc": {
     "message": "当课程进入直播状态时提醒"
   },
   "leaderChange": {
-    "message": "领跑者变更"
+    "message": "头车变更"
   },
   "leaderChangeDesc": {
     "message": "当 P1 车手被超越时提醒"
   },
   "trackIncidents": {
-    "message": "赛道事故 (SC/VSC)"
+    "message": "赛道事故"
   },
   "trackIncidentsDesc": {
     "message": "关于安全车、VSC 和红旗的警报"
@@ -86,7 +86,7 @@
     "message": "调查、处罚和 DRS 启用"
   },
   "saveChanges": {
-    "message": "保存更改"
+    "message": "应用配置"
   },
   "settingsSaved": {
     "message": "设置保存成功"
@@ -178,9 +178,7 @@
   "driverPlaceholder": {
     "message": "车手"
   },
-  "viewRepo": {
-    "message": "在 GitHub 上查看"
-  },
+  "viewRepo": { "message": "源代码" },
   "repoLabel": {
     "message": "代码库"
   }
