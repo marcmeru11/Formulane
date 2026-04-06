@@ -1,15 +1,14 @@
 /**
- * F1 Live Monitor Pro - Popup Script
- * Gestiona la visualización del podio, estado de pista y cuenta atrás.
+ * Formulane - Popup Engine
+ * Sincroniza el almacenamiento local con la interfaz HUD.
  */
 
-// Caché de elementos del DOM para rendimiento
 const elements = {
     title: document.getElementById('title'),
-    podium: document.getElementById('podium'),
-    modeLabel: document.getElementById('mode-label'),
+    podium: document.getElementById('podium'), // El contenedor .container
+    modeLabel: document.querySelector('.status-indicator'),
     trackBanner: document.getElementById('track-banner'),
-    trackLabel: document.getElementById('track-label')?.querySelector('span'),
+    trackLabel: document.getElementById('track-label'),
     trackMsg: document.getElementById('track-msg'),
     raceName: document.getElementById('race-name'),
     timer: document.getElementById('timer'),
@@ -17,53 +16,48 @@ const elements = {
 };
 
 /**
- * Renderiza la interfaz principal basándose en el estado almacenado.
+ * Renderiza la interfaz basándose en el CSS de alto impacto.
  */
 function render() {
     chrome.storage.local.get(['podium', 'title', 'nextRace', 'mode', 'trackStatus'], (data) => {
-        // 1. Estado de Sesión (LIVE / OFFLINE)
+        
+        // 1. Manejo del Estado LIVE / OFFLINE
         const isLive = data.mode === 'LIVE';
         if (isLive) {
             document.body.classList.add('live');
-            if (elements.modeLabel) elements.modeLabel.innerText = chrome.i18n.getMessage("live");
+            if (elements.modeLabel) elements.modeLabel.innerText = "LIVE";
         } else {
             document.body.classList.remove('live');
-            if (elements.modeLabel) elements.modeLabel.innerText = chrome.i18n.getMessage("offline");
+            if (elements.modeLabel) elements.modeLabel.innerText = "OFFLINE";
         }
 
-        // Título con fallback inteligente
+        // 2. Título de la Sesión
         if (elements.title) {
-            if (data.title) {
-                elements.title.innerText = data.title;
-            } else {
-                elements.title.innerText = isLive ? chrome.i18n.getMessage("live") : chrome.i18n.getMessage("noData");
-            }
+            elements.title.innerText = data.title || "FORMULANE HUD";
         }
 
-        // 2. Banner de incidentes en pista (SC, VSC, Banderas)
+        // 3. Banner de Incidentes (SC, VSC, Banderas)
         const ts = data.trackStatus;
-        if (ts && ts.mode !== 'CLEAR') {
+        if (ts && ts.mode !== 'CLEAR' && elements.trackBanner) {
             elements.trackBanner.style.display = 'flex';
-            elements.trackBanner.style.backgroundColor = ts.color;
+            elements.trackBanner.style.borderLeft = `4px solid ${ts.color}`;
             if (elements.trackLabel) elements.trackLabel.innerText = ts.label;
             if (elements.trackMsg) elements.trackMsg.innerText = ts.message;
-
-            // Animación para estados de aviso inminente (ENDING)
-            if (ts.mode?.includes('ENDING')) {
-                elements.trackBanner.classList.add('pulse-bg');
-            } else {
-                elements.trackBanner.classList.remove('pulse-bg');
-            }
+            
+            if (ts.mode.includes('ENDING')) elements.trackBanner.classList.add('pulse-bg');
+            else elements.trackBanner.classList.remove('pulse-bg');
         } else if (elements.trackBanner) {
             elements.trackBanner.style.display = 'none';
         }
 
-        // 3. Lista de Pilotos (Podio)
-        if (!data.podium?.length) {
+        // 4. Renderizado del Podio (Tarjetas Aero HUD)
+        if (!data.podium || data.podium.length === 0) {
             elements.podium.innerHTML = `
-                <div style="text-align:center; padding:20px; opacity:0.5; font-size:12px;">
-                    ${chrome.i18n.getMessage("waitingData")}
+                <div style="text-align:center; padding:40px; opacity:0.3; font-family: 'Orbitron'; font-size:10px; letter-spacing:1px;">
+                    SYNCING TELEMETRY...
                 </div>`;
+            // Forzar al background a trabajar si no hay datos
+            chrome.runtime.sendMessage({ type: 'FORCE_SYNC' });
         } else {
             elements.podium.innerHTML = data.podium.map((d, index) => `
                 <div class="driver-card" style="--team-color: ${d.color}; --team-glow: ${d.color}33; --delay: ${index * 0.1}s">
@@ -77,69 +71,44 @@ function render() {
             `).join('');
         }
 
-        // 4. Próximo evento
+        // 5. Próxima Carrera y Timer
         if (data.nextRace && elements.raceName) {
-            elements.raceName.innerText = data.nextRace.name;
+            elements.raceName.innerText = data.nextRace.name.toUpperCase();
             startTimer(data.nextRace.time);
         }
     });
 }
 
 /**
- * Gestiona el temporizador de cuenta atrás para la próxima sesión.
+ * Lógica del Temporizador
  */
 let timerInterval;
 function startTimer(target) {
     if (timerInterval) clearInterval(timerInterval);
-    
     const tick = () => {
         const diff = target - Date.now();
-        if (diff <= 0) { 
-            if (elements.timer) elements.timer.innerText = chrome.i18n.getMessage("onTrack"); 
-            return; 
+        if (diff <= 0) {
+            if (elements.timer) elements.timer.innerText = "TRACK ACTION LIVE";
+            return;
         }
-        
         const d = Math.floor(diff / 86400000);
         const h = Math.floor((diff % 86400000) / 3600000);
         const m = Math.floor((diff % 3600000) / 60000);
         const s = Math.floor((diff % 60000) / 1000);
-        
         if (elements.timer) {
-            const dStr = chrome.i18n.getMessage("dayAbbr");
-            const hStr = chrome.i18n.getMessage("hourAbbr");
-            const mStr = chrome.i18n.getMessage("minAbbr");
-            const sStr = chrome.i18n.getMessage("secAbbr");
-            elements.timer.innerText = `${d}${dStr} ${String(h).padStart(2,'0')}${hStr} ${String(m).padStart(2,'0')}${mStr} ${String(s).padStart(2,'0')}${sStr}`;
+            elements.timer.innerText = `${d}D ${String(h).padStart(2,'0')}H ${String(m).padStart(2,'0')}M ${String(s).padStart(2,'0')}S`;
         }
     };
-    
     tick();
     timerInterval = setInterval(tick, 1000);
 }
 
-/**
- * Traduce los elementos del DOM que tienen el atributo data-i18n.
- */
-function localizeHtml() {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const message = chrome.i18n.getMessage(key);
-        if (message) el.innerText = message;
-    });
-}
-
-// Suscripción a cambios y carga inicial
+// Listeners
 chrome.storage.onChanged.addListener(render);
+
 document.addEventListener('DOMContentLoaded', () => {
-    localizeHtml();
     render();
-    
-    // Botón de configuración
     elements.settingsBtn?.addEventListener('click', () => {
-        if (chrome.runtime.openOptionsPage) {
-            chrome.runtime.openOptionsPage();
-        } else {
-            window.open(chrome.runtime.getURL('src/options/options.html'));
-        }
+        chrome.runtime.openOptionsPage();
     });
 });
