@@ -21,15 +21,23 @@ const elements = {
  */
 function render() {
     chrome.storage.local.get(['podium', 'title', 'nextRace', 'mode', 'trackStatus'], (data) => {
-        if (elements.title) elements.title.innerText = data.title || chrome.i18n.getMessage("noData");
-        
         // 1. Estado de Sesión (LIVE / OFFLINE)
-        if (data.mode === 'LIVE') {
+        const isLive = data.mode === 'LIVE';
+        if (isLive) {
             document.body.classList.add('live');
             if (elements.modeLabel) elements.modeLabel.innerText = chrome.i18n.getMessage("live");
         } else {
             document.body.classList.remove('live');
             if (elements.modeLabel) elements.modeLabel.innerText = chrome.i18n.getMessage("offline");
+        }
+
+        // Título con fallback inteligente
+        if (elements.title) {
+            if (data.title) {
+                elements.title.innerText = data.title;
+            } else {
+                elements.title.innerText = isLive ? chrome.i18n.getMessage("live") : chrome.i18n.getMessage("noData");
+            }
         }
 
         // 2. Banner de incidentes en pista (SC, VSC, Banderas)

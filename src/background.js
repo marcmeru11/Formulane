@@ -10,10 +10,12 @@ const CACHE_TIMES = {
     DRIVERS: 1440 // 24 horas (una vez por sesión)
 };
 const DEFAULT_SETTINGS = {
-    refreshInterval: 2,
+    refreshInterval: 1,
     driverCount: 3,
     enableNotifications: true
 };
+
+let isSyncing = false; // Bloqueo de concurrencia
 
 const log = (msg) => console.log(`[F1-BG] ${msg}`);
 const delay = (ms) => new Promise(res => setTimeout(res, ms));
@@ -94,6 +96,8 @@ async function saveToCache(key, content) {
  * Punto de entrada para la sincronización periódica.
  */
 async function syncF1Data() {
+    if (isSyncing) return;
+    isSyncing = true;
     try {
         const now = new Date();
         const year = now.getFullYear();
@@ -101,13 +105,31 @@ async function syncF1Data() {
         // 1. Obtener sesiones (con caché)
         let allSessions = await getCachedData('f1_sessions_cache', CACHE_TIMES.SESSIONS);
         if (!allSessions) {
+            log(`Fetching sessions for ${year}...`);
             const raw = await safeGetJson(`${API_BASE}/sessions?year=${year}`);
-            if (raw === null) return;
+            if (raw === null) {
+                isSyncing = false;
+                return;
+            }
             allSessions = Array.isArray(raw) ? raw : (raw ? [raw] : []);
+            
+            // Fallback al año anterior si el actual no tiene datos (útil a principio de año)
+            if (allSessions.length === 0) {
+                log(`No sessions in ${year}. Falling back to ${year - 1}...`);
+                const prevRaw = await safeGetJson(`${API_BASE}/sessions?year=${year - 1}`);
+                allSessions = Array.isArray(prevRaw) ? prevRaw : (prevRaw ? [prevRaw] : []);
+            }
+
             if (allSessions.length > 0) await saveToCache('f1_sessions_cache', allSessions);
         }
 
-        if (!allSessions || allSessions.length === 0) return;
+        if (!allSessions || allSessions.length === 0) {
+            log("⚠ No sessions found at all.");
+            // Al menos aseguramos que la UI sepa que estamos intentando cargar
+            await chrome.storage.local.set({ mode: 'OFFLINE', title: chrome.i18n.getMessage("noData") });
+            isSyncing = false;
+            return;
+        }
 
         // 2. Identificar sesión activa o última relevante
         const active = allSessions.find(s => new Date(s.date_start) <= now && new Date(s.date_end) >= now);
@@ -120,13 +142,18 @@ async function syncF1Data() {
             target = active;
             isLive = true;
         } else {
+            // Buscamos la última carrera que PODRÍA tener datos si no hay activa
             const past = allSessions.filter(s => s.session_type === 'Race' && new Date(s.date_end) < now).sort((a,b) => new Date(b.date_end) - new Date(a.date_end))[0];
             if (past) target = past;
+            else if (allSessions.length > 0) target = allSessions[allSessions.length - 1]; // Última sesión sea cual sea
         }
 
-        if (!target) return;
+        if (!target) {
+            isSyncing = false;
+            return;
+        }
 
-        // Notificación de inicio de sesión
+        // Notificación de inicio de sesión si es en vivo
         const { lastSessionKey } = await chrome.storage.local.get('lastSessionKey');
         if (isLive && lastSessionKey !== target.session_key) {
             notify(chrome.i18n.getMessage("sessionLive"), `${chrome.i18n.getMessage("sessionStarted")} ${target.session_name || target.location}`, "notifySessionStart");
@@ -134,14 +161,15 @@ async function syncF1Data() {
         }
 
         // 3. Actualizar Podio y Estado de Pista (Secuencial para evitar 429)
-        const trackSuccess = await updateTrackStatus(target.session_key);
-        if (trackSuccess === null) return; // Abortar resto de sync si hay 429
-        
-        await delay(500);
+        await updateTrackStatus(target.session_key);
+        await delay(300);
         await updatePodium(target.session_key, target.session_name || target.location, isLive, next);
 
     } catch (e) {
         log(`Fallo crítico en syncF1Data: ${e.message}`);
+        await chrome.storage.local.set({ lastError: e.message, lastSync: Date.now() });
+    } finally {
+        isSyncing = false;
     }
 }
 
@@ -235,10 +263,11 @@ async function updatePodium(sessionKey, title, isLive, next) {
 
         if (!posRaw?.length || !drvRaw?.length) {
             if (posRaw === null) return; // Rate limit protection
-            // Si no hay datos nuevos, no borramos el podio existente
-            const { podium: current } = await chrome.storage.local.get('podium');
-            if (current?.length > 0) return;
-        }
+            // Si no hay datos nuevos de podio, al menos actualizamos el "OFFLINE" y "Título"
+            log(`⚠ No podio data for ${sessionKey}. Still updating meta info.`);
+            podium = []; // Reiniciamos podio si es nulo pero seguimos adelante con el storage set para modo/título
+        } else {
+            // Lógica original de mapeo de conductores
 
         const driversMap = {};
         if (Array.isArray(drvRaw)) {
@@ -266,16 +295,17 @@ async function updatePodium(sessionKey, title, isLive, next) {
             .sort((a,b) => a[1] - b[1])
             .slice(0, settings.driverCount || 3)
             .map(([num, pos]) => {
-                const info = driversMap[num] || { name: `${chrome.i18n.getMessage("driverPlaceholder")} ${num}`, team: "F1 TEAM" };
+                const info = driversMap[num] || { name: `${chrome.i18n.getMessage("driverPlaceholder")} ${num}`, team: "F1 TEAM", color: "#666" };
                 const colors = { 1: "#ffd700", 2: "#94a3b8", 3: "#92400e" };
                 return {
                     pos,
                     name: info.name,
                     team: info.team,
-                    color: colors[pos] || "#e10600",
+                    color: info.color || colors[pos] || "#e10600",
                     val: isLive ? chrome.i18n.getMessage("live") : chrome.i18n.getMessage("final")
                 };
             });
+        }
 
         // Notificar cambio de líder
         if (isLive && podium.length > 0) {
