@@ -10,7 +10,7 @@
     "48": "icons/formulane48.png",
     "128": "icons/formulane128.png"
   },
-  "permissions": ["alarms", "storage", "notifications"],
+  "permissions": ["alarms", "storage"],
   "host_permissions": ["https://api.openf1.org/*"],
   "action": { "default_popup": "src/popup/popup.html" },
   "options_ui": {
